@@ -19,9 +19,10 @@
             $j++;
         @endphp
         </p>
-        @if($j==2 && $res >= 1000)      
+        @if($j==3 && $res >= 1000)      
             @php
-                echo $i;
+                echo "entrou no loop " . $i;
+
             @endphp  
         @endif   
     
