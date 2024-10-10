@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TesteController;
+use App\Http\Controllers\Cliente;
 
 Route::get('/', [TesteController::class, 'homePage']);
 
@@ -28,3 +29,6 @@ Route::get('/exercicio9', [TesteController::class, 'exercicio9']);
 Route::get('/exercicio10', [TesteController::class, 'exercicio10']);
 
 Route::get('/exercicio11', [TesteController::class, 'exercicio11']);
+
+Route::get('/cadastrarCliente', [Cliente::class, 'create']);
+Route::post('/cadastrarCliente', [Cliente::class, 'store']);

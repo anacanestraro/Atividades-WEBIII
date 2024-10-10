@@ -7,8 +7,8 @@
     <title>Atividades WEBIII</title>
 </head>
 <body>
-    <a href="tabuadaTematica">Tabuada Temática</a>
 
+    <p><a href="tabuadaTematica">Tabuada Temática</a></p>
     <p><a href="exercicio1">Exercicio 1</a></p>
     <p><a href="exercicio2">Exercicio 2</a></p>
     <p><a href="exercicio3">Exercicio 3</a></p>
@@ -20,5 +20,6 @@
     <p><a href="exercicio9">Exercicio 9</a></p>
     <p><a href="exercicio10">Exercicio 10</a></p>
     <p><a href="exercicio11">Exercicio 11</a></p>
+    
 </body>
 </html>
