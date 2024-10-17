@@ -32,3 +32,5 @@ Route::get('/exercicio11', [TesteController::class, 'exercicio11']);
 
 Route::get('/cadastrarCliente', [Cliente::class, 'create']);
 Route::post('/cadastrarCliente', [Cliente::class, 'store']);
+Route::get('/listarCliente', [Cliente::class, 'index']);
+Route::delete('/deletarCliente/{id}', [Cliente::class, 'destroy']);
