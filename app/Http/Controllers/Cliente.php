@@ -41,8 +41,8 @@ class Cliente extends Controller
         return view('Cliente.edit', compact('cliente'));
     }
 
-    public function update(Request $request){
-        $status = ClienteModel::atualizar($request);
+    public function update(Request $request, $id){
+        $status = ClienteModel::atualizar($request, $id);
 
         if($status){
             return redirect()->back()->with('mensagem', 'Cliente atualizado com sucesso!');
