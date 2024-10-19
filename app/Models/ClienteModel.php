@@ -33,4 +33,19 @@ class ClienteModel extends Model
 
         return $status;
     }
+
+    public static function consultar($id){
+        $cliente = DB::table('clientes')->where('id', $id)->first();
+        return $cliente;
+    }
+
+    public static function atualizar(Request $request){
+        $status = DB::table('clientes')->update([
+            'nome'=>$request->input('nome'),
+            'cpf'=>$request->input('cpf'),
+            'telefone'=>$request->input('telefone'),
+            'email'=>$request->input('email'),
+        ]);
+        return $status;
+    }
 }

@@ -31,7 +31,7 @@
                 </td>    
 
                 <td>
-                    <a href="">Editar</a>
+                    <a href="editarCliente/{{$cliente->id}}">Editar</a>
                 </td>
             </tr>
         @endforeach

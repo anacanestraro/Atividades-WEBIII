@@ -35,4 +35,19 @@ class Cliente extends Controller
             return redirect('listarCliente')->with('mensagem', 'Erro ao deletar o cliente. Tente novamente.');
         }
     }
+
+    public function edit($id){
+        $cliente = ClienteModel::consultar($id);
+        return view('Cliente.edit', compact('cliente'));
+    }
+
+    public function update(Request $request){
+        $status = ClienteModel::atualizar($request);
+
+        if($status){
+            return redirect()->back()->with('mensagem', 'Cliente atualizado com sucesso!');
+        }else{
+            return redirect()->back()->with('mensagem', 'Erro ao atualizar o cliente. Tente novamente.');
+        }
+    }
 }
