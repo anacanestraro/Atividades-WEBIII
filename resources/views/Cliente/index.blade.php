@@ -10,7 +10,7 @@
 </head>
 <body>
     <p>
-        <input oninput="w3.filterHTML('#tabelaClientes', '.cliente', this.value)" placeholder="Pesquisar Cliente">
+        <input oninput="filtrarNomes(this.value)" placeholder="Pesquisar Cliente">
     </p>
     <table id="tabelaClientes">
         <tr>
@@ -23,7 +23,7 @@
 
         @foreach($clientes as $cliente)
             <tr class="cliente">
-                <td>{{$cliente->nome}}</td>
+                <td class="nome">{{$cliente->nome}}</td>
                 <td>{{$cliente->cpf}}</td>
                 <td>{{$cliente->telefone}}</td>
                 <td>{{$cliente->email}}</td>
@@ -42,5 +42,14 @@
         @endforeach
             
     </table>
+    <script>
+       function filtrarNomes(valor) { // recebendo o valor que é colocado no input
+        const linhas = document.querySelectorAll("#tabelaClientes .cliente"); // seleciona as linhas da tabela que possuem a classe cliente
+        linhas.forEach(linha => {
+            const nome = linha.querySelector(".nome").textContent.toLowerCase();
+            linha.style.display = nome.includes(valor.toLowerCase()) ? "" : "none";
+        });
+    }
+    </script>
 </body>
 </html>
