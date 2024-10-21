@@ -25,7 +25,7 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-color" id="navbar">
             <div class="container py-1">
-                <a href="#" class="navbar-brand">
+                <a href="/" class="navbar-brand">
                     <img src="/img/lexie.png" alt="lexie logo">
                     <span class="primary-color">Atividades WEBIII</span>
                 </a>

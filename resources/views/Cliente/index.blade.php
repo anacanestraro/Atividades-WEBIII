@@ -3,9 +3,13 @@
 @section('active', 'active')
 
 @section ('content')
-    <p>
-        <input oninput="filtrarNomes(this.value)" placeholder="Pesquisar Cliente">
-    </p>
+    <div class="row">
+
+        <div class="col-11 mt-3">
+            <input oninput="filtrarNomes(this.value)" class="form-control" placeholder="Pesquisar Cliente">
+        </div>
+    </div>
+    
     <table id="tabelaClientes">
         <tr>
             <th>Nome</th>            
@@ -30,7 +34,7 @@
                 </td>    
 
                 <td>
-                    <a href="editarCliente/{{$cliente->id}}">Editar</a>
+                    <a href="editarCliente/{{$cliente->id}}" >Editar</a>
                 </td>
             </tr>
         @endforeach

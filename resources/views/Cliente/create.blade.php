@@ -13,5 +13,5 @@
         <input type="submit" value="CADASTRAR">
     </form>
 
-    <a href="listarCliente">Listar Clientes</a>
+    <a href="listarCliente" class="nav-link secondary-color" >Listar Clientes</a>
 @endsection 
