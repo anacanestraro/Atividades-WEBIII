@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://www.w3schools.com/lib/w3.js"></script>
-    <title>Document</title>
+@extends('layouts.main')
+@section('title', 'Listar Clientes')
+@section('active', 'active')
 
-</head>
-<body>
+@section ('content')
     <p>
         <input oninput="filtrarNomes(this.value)" placeholder="Pesquisar Cliente">
     </p>
@@ -51,5 +45,4 @@
         });
     }
     </script>
-</body>
-</html>
+@endsection
