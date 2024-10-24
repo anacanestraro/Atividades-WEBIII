@@ -45,9 +45,9 @@ class Cliente extends Controller
         $status = ClienteModel::atualizar($request, $id);
 
         if($status){
-            return redirect()->back()->with('mensagem', 'Cliente atualizado com sucesso!');
+            return redirect('listarCliente')->with('mensagem', 'Cliente atualizado com sucesso!');
         }else{
-            return redirect()->back()->with('mensagem', 'Erro ao atualizar o cliente. Tente novamente.');
+            return redirect('listarCliente')->with('mensagem', 'Erro ao atualizar o cliente. Tente novamente.');
         }
     }
 }
