@@ -48,6 +48,15 @@
                         <li class="nav-item">
                             <a href="/cadastrarCliente" class="nav-link primary-color {{ request()->is('cadastrarCliente') ? 'active' : '' }}">Cadastro</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="underline ms-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" :href="route('logout')"
+                                        onclick="event.preventDefault();
+                                                    this.closest('form').submit();">
+                                {{ __('Log out') }}
+                            </a>
+
+                        
+                        </li>
                     </ul>
                 </div>
                 
