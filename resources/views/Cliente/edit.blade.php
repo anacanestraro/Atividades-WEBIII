@@ -4,7 +4,7 @@
 
 @section ('content')
 <body>
-    <form action="" method="POST">
+    <form action="{{ url('editarCliente/' . $cliente->id)}}" method="POST">
         @csrf 
         @method('PUT')
         Nome:
