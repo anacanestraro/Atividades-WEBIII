@@ -28,6 +28,7 @@ Route::get('/listarCliente', [Cliente::class, 'index']);
 Route::delete('/deletarCliente/{id}', [Cliente::class, 'destroy']);
 Route::get('/editarCliente/{id}', [Cliente::class, 'edit']);
 Route::put('/editarCliente/{id}', [Cliente::class, 'update']);
+Route::get('/mostrarCliente/{id}', [Cliente::class, 'show']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

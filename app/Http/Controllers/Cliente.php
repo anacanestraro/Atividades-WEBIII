@@ -50,4 +50,9 @@ class Cliente extends Controller
             return redirect('listarCliente')->with('mensagem', 'Erro ao atualizar o cliente. Tente novamente.');
         }
     }
+
+    public function show($id){
+        $cliente = ClienteModel::consultar($id);
+        return view('Cliente.show', compact('cliente'));
+    }
 }

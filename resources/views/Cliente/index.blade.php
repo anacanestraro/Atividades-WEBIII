@@ -36,6 +36,10 @@
                 <td>
                     <a href="editarCliente/{{$cliente->id}}" >Editar</a>
                 </td>
+                
+                <td>
+                    <a href="mostrarCliente/{{$cliente->id}}">Visualizar Detalhes</a>
+                </td>
             </tr>
         @endforeach
             
