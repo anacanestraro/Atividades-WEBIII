@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TesteController;
 use App\Http\Controllers\Lista1;
 use App\Http\Controllers\Cliente;
+use App\Http\Controllers\CategoriaController;
 
 Route::get('/', [TesteController::class, 'homePage'])->name('homePage');
 Route::get('/tabuadatematica', [TesteController::class, 'tabuadatematica']);
@@ -29,6 +30,8 @@ Route::delete('/deletarCliente/{id}', [Cliente::class, 'destroy']);
 Route::get('/editarCliente/{id}', [Cliente::class, 'edit']);
 Route::put('/editarCliente/{id}', [Cliente::class, 'update']);
 Route::get('/mostrarCliente/{id}', [Cliente::class, 'show']);
+
+Route::resource('Categorias', CategoriaController::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
