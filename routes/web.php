@@ -6,6 +6,7 @@ use App\Http\Controllers\TesteController;
 use App\Http\Controllers\Lista1;
 use App\Http\Controllers\Cliente;
 use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\GoogleLoginController;
 
 Route::get('/', [TesteController::class, 'homePage'])->name('homePage');
 Route::get('/tabuadatematica', [TesteController::class, 'tabuadatematica']);
@@ -32,6 +33,15 @@ Route::put('/editarCliente/{id}', [Cliente::class, 'update']);
 Route::get('/mostrarCliente/{id}', [Cliente::class, 'show']);
 
 Route::resource('Categorias', CategoriaController::class);
+
+Route::get('/', function (){
+    return redirect()->route('login');
+});
+
+Route::get('/google/redirect', [GoogleLoginController::class, 'redirectToGoogle'])->name('google.redirect');
+Route::get('/auth/google/callback', [GoogleLoginController::class, 'handleGoogleCallback']);
+Route::get('/logout', [GoogleLoginController::class, 'logout'])->name('logout');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
