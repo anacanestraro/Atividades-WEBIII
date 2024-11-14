@@ -20,7 +20,6 @@ class GoogleLoginController extends Controller
 
         if($user){
             Auth::login($user);
-            return redirect('/');
         }else{
             $user = User::updateOrCreate([
                 'google_id' => $googleUser->id,
