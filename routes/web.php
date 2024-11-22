@@ -34,15 +34,6 @@ Route::get('/mostrarCliente/{id}', [Cliente::class, 'show']);
 
 Route::resource('Categorias', CategoriaController::class);
 
-Route::get('/', function (){
-    return redirect()->route('login');
-});
-
-Route::get('/google/redirect', [GoogleLoginController::class, 'redirectToGoogle'])->name('google.redirect');
-Route::get('/auth/google/callback', [GoogleLoginController::class, 'handleGoogleCallback']);
-Route::get('/logout', [GoogleLoginController::class, 'logout'])->name('logout');
-
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
