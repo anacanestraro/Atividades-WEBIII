@@ -7,6 +7,7 @@
     <form action="{{ url('editarCliente/' . $cliente->id)}}" method="POST">
         @csrf 
         @method('PUT')
+        
         Nome:
             <input type="text" name="nome" value="{{$cliente->nome}}">
         CPF:

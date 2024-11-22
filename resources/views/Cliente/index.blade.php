@@ -1,16 +1,15 @@
-@extends('layouts.main')
-@section('title', 'Listar Clientes')
-@section('active', 'active')
-
-@section ('content')
+<x-app-layout>
+    <div class="dark:text-gray-500">
     <div class="row">
 
         <div class="col-11 mt-3">
             <input oninput="filtrarNomes(this.value)" class="form-control" placeholder="Pesquisar Cliente">
         </div>
     </div>
-    
+
+    <p>{{session('mensagem')}}</p>
     <table id="tabelaClientes">
+    
         <tr>
             <th>Nome</th>            
             <th>CPF</th>
@@ -20,6 +19,7 @@
         </tr>
 
         @foreach($clientes as $cliente)
+
             <tr class="cliente">
                 <td class="nome">{{$cliente->nome}}</td>
                 <td>{{$cliente->cpf}}</td>
@@ -53,4 +53,5 @@
         });
     }
     </script>
-@endsection
+    </div>
+</x-app-layout>

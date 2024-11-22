@@ -43,7 +43,7 @@
                             <a href="/lista1" class="nav-link primary-color {{ request()->is('lista1') ? 'active' : '' }}">Lista 1</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/tabuadatematica" class="nav-link primary-color {{ request()->is('tabuadatematica') ? 'active' : '' }}">Tabuada temática</a>
+                            <a href="/tabuadaTematica" class="nav-link primary-color {{ request()->is('tabuadaTematica') ? 'active' : '' }}">Tabuada temática</a>
                         </li>
                         <li class="nav-item">
                             <a href="/cadastrarCliente" class="nav-link primary-color {{ request()->is('cadastrarCliente') ? 'active' : '' }}">Cadastro</a>
@@ -51,11 +51,11 @@
                         <li class="nav-item">
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
-                            <x-dropdown-link :href="route('logout')"
+                            <x-nav-link :href="route('logout')"
                                     onclick="event.preventDefault();
                                                 this.closest('form').submit();">
                                 {{ __('Log Out') }}
-                            </x-dropdown-link>
+                            </x-nav-link>
                         </form>
                         
                         </li>

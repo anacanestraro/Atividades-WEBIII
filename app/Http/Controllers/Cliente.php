@@ -15,9 +15,9 @@ class Cliente extends Controller
         $status = ClienteModel::salvar($request);
 
         if($status){
-            return redirect()->back()->with('mensagem', 'Cliente cadastrado com sucesso!');
+            return redirect('listarCliente')->with('mensagem', 'Cliente cadastrado com sucesso!');
         }else{
-            return redirect()->back()->with('mensagem', 'Erro ao cadastrar o cliente. Tente novamente.');
+            return redirect('listarCliente')->with('mensagem', 'Erro ao cadastrar o cliente. Tente novamente.');
         }
     }
 

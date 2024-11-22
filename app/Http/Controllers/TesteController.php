@@ -10,6 +10,10 @@ class TesteController extends Controller
         return view('homePage');
     }
 
+    public function navbar(){
+        return view('layouts.navbar');
+    }
+
     public function tabuadaTematica(){
         return view('tabuadaTematica');
     }
