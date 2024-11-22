@@ -27,7 +27,7 @@ Route::get('/exercicio11', [Lista1::class, 'exercicio11']);
 
 Route::get('/cadastrarCliente', [Cliente::class, 'create'])->middleware(['auth'])->name('cadastrarCliente');;
 Route::post('/cadastrarCliente', [Cliente::class, 'store']);
-Route::get('/listarCliente', [Cliente::class, 'index']);
+Route::get('/listarCliente', [Cliente::class, 'index'])->name('listarCliente');
 Route::delete('/deletarCliente/{id}', [Cliente::class, 'destroy']);
 Route::get('/editarCliente/{id}', [Cliente::class, 'edit']);
 Route::put('/editarCliente/{id}', [Cliente::class, 'update']);
