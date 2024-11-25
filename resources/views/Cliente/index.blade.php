@@ -1,3 +1,4 @@
+@section('title', 'Listar Clientes')
 <x-app-layout>
     <div class="bg-gradient-to-r from-violet-100 to-indigo-100 flex items-center justify-center h-screen mt-4">
         <div class="w-11/12 sm:w-11/12 md:w/12 lg:w-6/12 backdrop-blur-sm bg-white/40 p-6 rounded-lg shadow-sm border-gray-100 border">

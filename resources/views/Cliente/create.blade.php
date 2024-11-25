@@ -1,3 +1,4 @@
+@section('title', 'Cadastrar Cliente')
 <x-app-layout>
 
 <form action="/cadastrarCliente" method="post">

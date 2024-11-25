@@ -1,3 +1,5 @@
+@section('title', 'Tabuada Temática')
+
 <x-app-layout>
     <div class="dark:text-white">
         @for($i=0; $i< 11;$i++)
