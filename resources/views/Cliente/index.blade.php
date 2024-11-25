@@ -1,15 +1,14 @@
 <x-app-layout>
     <div class="dark:text-gray-500">
     <div class="row">
-
         <div class="col-11 mt-3">
             <input oninput="filtrarNomes(this.value)" class="form-control" placeholder="Pesquisar Cliente">
         </div>
     </div>
 
     <p>{{session('mensagem')}}</p>
-    <table id="tabelaClientes">
     
+    <table id="tabelaClientes">
         <tr>
             <th>Nome</th>            
             <th>CPF</th>

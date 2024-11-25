@@ -12,6 +12,8 @@ Route::get('/', [TesteController::class, 'homePage'])->name('homePage')->middlew
 Route::get('/tabuadaTematica', [TesteController::class, 'tabuadaTematica'])->name('tabuadaTematica');
 
 Route::get('/navbar', [TesteController::class, 'navbar']);
+Route::get('/index2', [TesteController::class, 'index2'])->name('index2');
+
 Route::get('/lista1', [Lista1::class, 'lista1'])->name('lista1');;
 Route::get('/exercicio1', [Lista1::class, 'exercicio1']);
 Route::get('/exercicio2', [Lista1::class, 'exercicio2']);

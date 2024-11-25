@@ -1,4 +1,5 @@
 <x-app-layout>
+    <div class="dark:text-white">
         @for($i=0; $i< 11;$i++)
             @php
                 $res = 2 * $i;
@@ -9,4 +10,5 @@
                 @endfor
             </p>
         @endfor
+        </div>    
 </x-app-layout>
