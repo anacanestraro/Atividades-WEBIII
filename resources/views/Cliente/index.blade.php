@@ -44,7 +44,7 @@
                                 </div>
                             </div>
                             <div class="flex flex-1 w-full">
-                                <x-primary-button>
+                                <x-primary-button class="sm:w-full md:w-full lg:w-full">
                                     <a href="mostrarCliente/{{$cliente->id}}">Visualizar Detalhes</a>
                                 </x-primary-button>
                             </div>
